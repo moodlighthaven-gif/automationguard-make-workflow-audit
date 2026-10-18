@@ -30,6 +30,30 @@ flowchart TB
     F --> G["Ready to Order (correct route)"]
 ```
 
+## Workflow overview
+
+```mermaid
+flowchart LR
+    A[QA webhook] --> B[Duplicate check]
+    B --> C[Conversation state lookup]
+    C --> D[AI extraction]
+    D --> E[Product lookup]
+    E --> F[Delivery rules]
+    F --> G[Price calculation]
+    G --> H[Module 61: intent normalization]
+    H --> I{Decision Router}
+    I --> J[Ready to Order]
+    I --> K[Ask Clarification]
+    I --> L[Human Review]
+    I --> M[General Enquiry]
+    J --> N[Response and QA log]
+    K --> N
+    L --> N
+    M --> N
+```
+
+Only **Ready to Order** and **General Enquiry** use the normalized intent. Other filters may still use the AI's original intent. Conversation state is updated only where the workflow is configured to do so.
+
 ## What the retest showed
 
 In the final run, the AI **again said Just Asking**, but the new rule changed the routing decision to **Ready to Buy**. The workflow selected **Ready to Order**, calculated **KSh 90,800**, asked whether the customer preferred **M-Pesa or cash on delivery**, and finished without errors.
