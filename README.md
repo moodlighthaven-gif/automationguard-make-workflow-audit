@@ -1,4 +1,4 @@
-# AutomationGuard — Make.com Workflow Audit
+# AutomationGuard - Make.com Workflow Audit
 
 I tested my furniture enquiry automation to see whether it made the **right decision**, not just whether Make.com reported a successful run.
 
