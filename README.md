@@ -1,4 +1,4 @@
-# AutomationGuard — Make.com Workflow Audit
+# AutomationGuard - Make.com Workflow Audit
 
 A small project I built to test and improve an AI-powered furniture enquiry workflow.
 
