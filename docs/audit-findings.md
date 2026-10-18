@@ -51,6 +51,10 @@ This was a reminder that a Make scenario can pass configuration validation but f
 
 This directly tests the original misrouting case. It doesn't measure the reliability of the safeguard on other phrases.
 
+## One more issue to check
+
+The final run used **Ready to Buy** for routing while the AI's original value was **Just Asking**. The separate master report says that original value was stored in conversation state and the Sheets log marked the enquiry as an order. This should be checked against those records before calling it a confirmed data-consistency defect.
+
 ## Remaining limitations
 
 - Some other routes still depend on the raw AI purchase intent.
